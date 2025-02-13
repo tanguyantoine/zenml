@@ -11563,7 +11563,9 @@ class SqlZenStore(BaseZenStore):
         self,
         expected_workspace_id: UUID,
         obj: Union[
-            AnySchema, WorkspaceScopedResponse, Tuple[Type[AnySchema], UUID]
+            AnySchema,
+            WorkspaceScopedResponse,
+            Tuple[Type[AnySchema], Union[UUID, str]],
         ],
         session: Optional[Session] = None,
     ) -> None:
